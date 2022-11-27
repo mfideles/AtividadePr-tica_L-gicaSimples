@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício8</title>
+</head>
+<body>
+    <script>
+        /*  Escreva um algoritmo que tenha como valores de entradas o nome
+        e idade do usuário e imprima no terminal o nome e a quantidade de
+        letras que o nome possui, bem como a idade e o ano de nascimento
+        do usuário. Ex: “Nome: Pedro, 5 letras. Idade: 22 anos, nasceu em
+        2000”. */
+
+
+
+        const nome = prompt('Digite seu nome: ')
+        const idade = parseInt(prompt('Digite a sua idade: '))
+        let data = new Date()
+        let year = data.getFullYear()
+        let birthYear = year - idade
+
+        document.write(`O seu nome é ${nome}, e tem ${nome.length} letras.`)
+        document.write(`Sua idade é: ${idade}, e você nasceu em ${birthYear}`)
+    </script>
+</body>
+</html>

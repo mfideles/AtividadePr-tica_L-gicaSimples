@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício2</title>
+</head>
+<body>
+    <script>
+        /*2. Desenvolva um algoritmo para ler o número total de eleitores de um
+        município, o número de votos brancos, nulos e válidos. Calcular e
+        escrever o percentual que cada um representa em relação ao total
+        de eleitores.*/
+
+
+        const TotalEleitores = parseInt(prompt('Digite o total de eleitores: '))
+        const VotosBrancos = parseInt(prompt('Digite o total de votos brancos'))
+        const VotosNulos = parseInt(prompt('Digite o total de nulos'))
+
+        const VotosValidos = TotalEleitores - (VotosBrancos + VotosNulos)
+
+
+        const PValidos = (VotosValidos / TotalEleitores) * 100
+        const PBrancos = (VotosBrancos / TotalEleitores) * 100
+        const PNulos = (VotosNulos / TotalEleitores) * 100
+
+        const textoValidos = ('A percentagem de válidos é: ')
+        const textoBrancos = ('A percentagem de brancos é: ')
+        const textoNulos = ('A percentagem de nulos é: ')
+
+        document.write(`${textoValidos} ${PValidos}`)
+        document.write(`${textoBrancos} ${PBrancos}`)
+        document.write(`${textoNulos} ${PNulos}`)
+    
+    </script>
+</body>
+</html>
